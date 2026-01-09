@@ -20,26 +20,38 @@ const projects = [
     link: "https://e-commerce-mk8l.vercel.app/",
     github: "https://github.com/Nishadsha91/E-commerce",
     image: "project.png",
-    tags: ["React", "JSON-server", "Tailwind"],
+    tags: ["React", "Django", "Tailwind"],
     category: "Full-Stack",
     year: "2025"
   },
-  {
-    title: "Admin Dashboard",
-    desc: "An admin dashboard with charts, analytics, and CRUD operations. Built using React, Redux, and Chart.js for data visualization.",
-    link: "https://e-commerce-mk8l.vercel.app/",
-    github: "https://github.com/Nishadsha91/E-commerce",
-    image: "admin.png",
-    tags: ["React", "Redux", "Chart.js"],
-    category: "Frontend",
-    year: "2025"
-  },
+  // {
+  //   title: "Admin Dashboard",
+  //   desc: "An admin dashboard with charts, analytics, and CRUD operations. Built using React, Redux, and Chart.js for data visualization.",
+  //   link: "https://e-commerce-mk8l.vercel.app/",
+  //   github: "https://github.com/Nishadsha91/E-commerce",
+  //   image: "admin.png",
+  //   tags: ["React", "Redux", "Chart.js"],
+  //   category: "FullStack",
+  //   year: "2025"
+  // },
+{
+  title: "CodeMentor AI",
+  desc: "An AI-powered coding mentor platform with a microservices-based backend, real-time collaboration, intelligent code review, and personalized learning workflows.",
+  github: "https://github.com/Nishadsha91/CodeMentorAI-Services",
+  link: "https://github.com/Nishadsha91/CodeMentorAI-Frontend",
+  image: "codementor.png",
+  tags: ["React", "Django", "FastAPI", "Microservices"],
+  category: "Full Stack",
+  year: "2025",
+  type: "case-study"
+},
+
 ];
 
 const Projects = () => {
   return (
     <section id="projects" className="relative py-32 bg-black text-white overflow-hidden">
-      <ParticleBackground/>
+      <ParticleBackground />
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div
@@ -52,7 +64,7 @@ const Projects = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -72,7 +84,7 @@ const Projects = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="space-y-32">
+        <div className="space-y-16 md:space-y-32">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -82,12 +94,11 @@ const Projects = () => {
               className="group"
             >
               <div className="grid lg:grid-cols-12 gap-12 items-center">
-                
+
                 {/* Project Image */}
                 <div
-                  className={`lg:col-span-7 relative ${
-                    index % 2 === 1 ? "lg:order-2" : "lg:order-1"
-                  }`}
+                  className={`lg:col-span-7 relative ${index % 2 === 1 ? "lg:order-2" : "lg:order-1"
+                    }`}
                 >
                   <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 p-1">
                     <div className="relative rounded-xl overflow-hidden bg-black">
@@ -96,17 +107,17 @@ const Projects = () => {
                         alt={project.title}
                         className="w-full h-[300px] lg:h-[400px] object-cover transition-all duration-700 group-hover:scale-105"
                       />
-                      
+
                       {/* Overlay on Hover */}
                       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center space-x-6">
-                        <a
+                        {/* <a
                           href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-100 transition-colors transform hover:scale-110"
                         >
                           Live Demo <ExternalLink size={18} />
-                        </a>
+                        </a> */}
                         <a
                           href={project.github}
                           target="_blank"
@@ -117,7 +128,7 @@ const Projects = () => {
                         </a>
                       </div>
                     </div>
-                    
+
                     {/* Gradient Border Effect */}
                     <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm"></div>
                   </div>
@@ -125,11 +136,10 @@ const Projects = () => {
 
                 {/* Project Details */}
                 <div
-                  className={`lg:col-span-5 space-y-8 ${
-                    index % 2 === 1 ? "lg:order-1" : "lg:order-2"
-                  }`}
+                  className={`lg:col-span-5 space-y-8 ${index % 2 === 1 ? "lg:order-1" : "lg:order-2"
+                    }`}
                 >
-                  
+
                   {/* Project Number & Category */}
                   <div className="flex items-center gap-4">
                     <span className="text-6xl font-black text-gray-800">
@@ -180,7 +190,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="group/btn flex items-center gap-2 px-8 py-4 bg-white text-black rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
                     >
-                      View Project 
+                      View Project
                       <ArrowUpRight size={20} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                     </a>
                     <a

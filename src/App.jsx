@@ -7,12 +7,14 @@ import Contact from "./Components/Sections/Contact";
 
 function App() {
   return (
+    
     <Layout>
       <Hero />
       <About />
       <Projects />
       <Contact />
     </Layout>
+    
   );
 }
 

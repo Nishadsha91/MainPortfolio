@@ -73,3 +73,99 @@ const CustomCursor = () => {
 };
 
 export default CustomCursor;
+
+
+
+// import React, { useEffect, useState, useCallback } from "react";
+
+// const CustomCursor = () => {
+//   const [isHovering, setIsHovering] = useState(false);
+//   const [hoverText, setHoverText] = useState("");
+
+//   // Use ref for direct DOM manipulation (most performant)
+//   const cursorRef = React.useRef(null);
+
+//   // Throttled mouse move handler
+//   const mouseMoveHandler = useCallback((e) => {
+//     if (cursorRef.current) {
+//       cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+//     }
+//   }, []);
+
+//   useEffect(() => {
+//     // Use passive event listener for better performance
+//     window.addEventListener("mousemove", mouseMoveHandler, { passive: true });
+
+//     // Event delegation for hover states
+//     const handleMouseOver = (e) => {
+//       if (e.target.classList.contains('hero-name')) {
+//         setIsHovering(true);
+//         setHoverText(e.target.innerText || "");
+        
+//         // Update cursor size immediately
+//         if (cursorRef.current) {
+//           cursorRef.current.style.width = '120px';
+//           cursorRef.current.style.height = '120px';
+//           cursorRef.current.style.fontSize = '24px';
+//         }
+//       }
+//     };
+
+//     const handleMouseOut = (e) => {
+//       if (e.target.classList.contains('hero-name')) {
+//         setIsHovering(false);
+//         setHoverText("");
+        
+//         // Update cursor size immediately
+//         if (cursorRef.current) {
+//           cursorRef.current.style.width = '30px';
+//           cursorRef.current.style.height = '30px';
+//           cursorRef.current.style.fontSize = '0px';
+//         }
+//       }
+//     };
+
+//     document.addEventListener('mouseover', handleMouseOver, { passive: true });
+//     document.addEventListener('mouseout', handleMouseOut, { passive: true });
+
+//     return () => {
+//       window.removeEventListener("mousemove", mouseMoveHandler);
+//       document.removeEventListener('mouseover', handleMouseOver);
+//       document.removeEventListener('mouseout', handleMouseOut);
+//     };
+//   }, [mouseMoveHandler]);
+
+//   return (
+//     <div
+//       ref={cursorRef}
+//       className="custom-cursor"
+//       style={{
+//         position: "fixed",
+//         top: -15, // Half of default size (30px)
+//         left: -15, // Half of default size (30px)
+//         width: "30px",
+//         height: "30px",
+//         backgroundColor: "white",
+//         borderRadius: "50%",
+//         pointerEvents: "none",
+//         transform: "translate3d(0, 0, 0)",
+//         transition: "width 0.2s ease, height 0.2s ease, font-size 0.2s ease",
+//         zIndex: 9999,
+//         mixBlendMode: "normal",
+//         boxShadow: "0 0 5px rgba(255,255,255,0.3)",
+//         display: "flex",
+//         justifyContent: "center",
+//         alignItems: "center",
+//         fontSize: "0px",
+//         fontWeight: "bold",
+//         color: "#000",
+//         overflow: "hidden",
+//         willChange: "transform",
+//       }}
+//     >
+//       {hoverText}
+//     </div>
+//   );
+// };
+
+// export default CustomCursor;
