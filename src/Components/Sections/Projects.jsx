@@ -24,16 +24,16 @@ const projects = [
     category: "Full-Stack",
     year: "2025"
   },
-  // {
-  //   title: "Admin Dashboard",
-  //   desc: "An admin dashboard with charts, analytics, and CRUD operations. Built using React, Redux, and Chart.js for data visualization.",
-  //   link: "https://e-commerce-mk8l.vercel.app/",
-  //   github: "https://github.com/Nishadsha91/E-commerce",
-  //   image: "admin.png",
-  //   tags: ["React", "Redux", "Chart.js"],
-  //   category: "FullStack",
-  //   year: "2025"
-  // },
+  {
+    title: "AstutePro",
+    desc: "AstutePro stands as a trusted partner for businesses, offering end-to-end accounting, VAT, and financial advisory services.",
+    link: "https://astutepro.ae/",
+    github: "https://github.com/Nishadsha91/MainPortfolio",
+    image: "astutepro.png",
+    tags: ["React", "Redux", "Framer Motion"],
+    category: "Frontend",
+    year: "2025"
+  },
 {
   title: "CodeMentor AI",
   desc: "An AI-powered coding mentor platform with a microservices-based backend, real-time collaboration, intelligent code review, and personalized learning workflows.",
@@ -41,7 +41,7 @@ const projects = [
   link: "https://github.com/Nishadsha91/CodeMentorAI-Frontend",
   image: "codementor.png",
   tags: ["React", "Django", "FastAPI", "Microservices"],
-  category: "Full Stack",
+  category: "Full-Stack",
   year: "2025",
   type: "case-study"
 },
